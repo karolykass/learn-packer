@@ -4,9 +4,50 @@ This repo is for myself and is about how to build VMs in an automated way with H
 
 ## Build VMs with Packer
 
-### Debian 9.8
+### Debian 9.8.0
 
-#### Debian automated install
+#### Build with packer
+
+##### Prerequisites
+
+###### macOS or Linux
+
+I used macOS.  
+
+$ sw_vers  
+ProductName:	Mac OS X  
+ProductVersion:	10.14.3  
+BuildVersion:	18D109  
+
+###### VirtualBox
+
+$ VirtualBoxVM --help | head -n 1  
+Oracle VM VirtualBox VM Runner v6.0.4  
+$ VBoxManage --version  
+6.0.4r128413  
+
+###### Packer
+
+$ packer version  
+Packer v1.3.5  
+
+##### Validate template
+
+$ **packer validate** ***debian-9.8.0-amd64-standard-hu.json***
+
+##### Inspect template
+
+$ **packer inspect** ***debian-9.8.0-amd64-standard-hu.json***
+
+##### Build VM
+
+$ **packer build** ***debian-9.8.0-amd64-standard-hu.json***
+
+#### Import VM to VirtualBox
+
+VirtualBox -> File -> Import Appliance... -> build/debian/packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso.ovf
+
+#### Debian automated install notes
 
 DebianInstaller Preseed  
 https://wiki.debian.org/DebianInstaller/Preseed
@@ -50,47 +91,6 @@ Debian 9.8 stretch amd64 iso
 http://ftp.bme.hu/debian-cd/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso  
 http://ftp.bme.hu/debian-cd/9.8.0/amd64/iso-cd/SHA512SUMS  
 cc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245    debian-9.8.0-amd64-netinst.iso
-
-#### Build with packer
-
-##### Prerequisites
-
-###### macOS or Linux
-
-I used macOS.  
-
-$ sw_vers  
-ProductName:	Mac OS X  
-ProductVersion:	10.14.3  
-BuildVersion:	18D109  
-
-###### VirtualBox
-
-$ VirtualBoxVM --help | head -n 1  
-Oracle VM VirtualBox VM Runner v6.0.4  
-$ VBoxManage --version  
-6.0.4r128413  
-
-###### Packer
-
-$ packer version  
-Packer v1.3.5  
-
-##### Validate template
-
-$ packer validate debian-9.8.0-amd64-standard-hu.json
-
-##### Inspect template
-
-$ packer inspect debian-9.8.0-amd64-standard-hu.json
-
-##### Build VM
-
-$ packer build debian-9.8.0-amd64-standard-hu.json
-
-#### Import VM to VirtualBox
-
-VirtualBox -> File -> Import Appliance... -> build/debian/packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso.ovf
 
 ## Used examples / useful links
 

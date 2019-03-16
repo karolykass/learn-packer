@@ -78,15 +78,15 @@ Packer v1.3.5
 
 ##### Validate template
 
-$ packer validate debian-9.8.0-amd64-basic.json
+$ packer validate debian-9.8.0-amd64-standard-hu.json
 
 ##### Inspect template
 
-$ packer inspect debian-9.8.0-amd64-basic.json
+$ packer inspect debian-9.8.0-amd64-standard-hu.json
 
 ##### Build VM
 
-$ packer build debian-9.8.0-amd64-basic.json
+$ packer build debian-9.8.0-amd64-standard-hu.json
 
 #### Import VM to VirtualBox
 

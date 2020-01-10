@@ -16,20 +16,20 @@ I used macOS.
 
 $ sw_vers  
 ProductName:	Mac OS X  
-ProductVersion:	10.14.3  
-BuildVersion:	18D109  
+ProductVersion:	10.14.6  
+BuildVersion:	18G2022  
 
 ###### VirtualBox
 
 $ VirtualBoxVM --help | head -n 1  
-Oracle VM VirtualBox VM Runner v6.0.4  
+Oracle VM VirtualBox VM Runner v6.1.0  
 $ VBoxManage --version  
-6.0.4r128413  
+6.1.0r135406  
 
 ###### Packer
 
-$ packer version  
-Packer v1.3.5  
+$ packer version
+Packer v1.5.1
 
 ##### Validate template
 

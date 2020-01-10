@@ -18,7 +18,6 @@ host:learn-packer user$ VBoxManage --version
 
 host:learn-packer user$ packer version
 Packer v1.5.1
-packer inspect debian-9.8.0-amd64-standard-hu.json
 
 
 host:learn-packer user$ packer validate debian-9.8.0-amd64-standard-hu.json

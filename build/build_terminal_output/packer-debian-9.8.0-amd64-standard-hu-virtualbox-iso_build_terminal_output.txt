@@ -1,27 +1,27 @@
-KASSKN02:learn-packer kassk$ date
+host:learn-packer user$ date
 Fri Jan 10 15:14:19 CET 2020
 
 
-KASSKN02:learn-packer kassk$ sw_vers
+host:learn-packer user$ sw_vers
 ProductName:	Mac OS X
 ProductVersion:	10.14.6
 BuildVersion:	18G2022
 
 
-KASSKN02:learn-packer kassk$ VirtualBoxVM --help | head -n 1
+host:learn-packer user$ VirtualBoxVM --help | head -n 1
 Oracle VM VirtualBox VM Runner v6.1.0
 
 
-KASSKN02:learn-packer kassk$ VBoxManage --version
+host:learn-packer user$ VBoxManage --version
 6.1.0r135406
 
 
-KASSKN02:learn-packer kassk$ packer version
+host:learn-packer user$ packer version
 Packer v1.5.1
 packer inspect debian-9.8.0-amd64-standard-hu.json
 
 
-KASSKN02:learn-packer kassk$ packer validate debian-9.8.0-amd64-standard-hu.json
+host:learn-packer user$ packer validate debian-9.8.0-amd64-standard-hu.json
 Template validation succeeded, but there were some warnings.
 These are ONLY WARNINGS, and Packer will attempt to build the
 template despite them, but they should be paid attention to.
@@ -31,7 +31,7 @@ Warnings for build 'virtualbox-iso':
 * You have provided both an iso_checksum and an iso_checksum_url. Discarding the iso_checksum_url and using the checksum.
 
 
-KASSKN02:learn-packer kassk$ packer inspect debian-9.8.0-amd64-standard-hu.json
+host:learn-packer user$ packer inspect debian-9.8.0-amd64-standard-hu.json
 Optional variables and their defaults:
 
   debian_cd_mirror        = http://ftp.bme.hu/debian-cd
@@ -61,7 +61,7 @@ functions such as 'timestamp', these are processed at build time,
 and therefore only show in their raw form here.
 
 
-KASSKN02:learn-packer kassk$ packer build debian-9.8.0-amd64-standard-hu.json
+host:learn-packer user$ packer build debian-9.8.0-amd64-standard-hu.json
 virtualbox-iso: output will be in this color.
 
 Warnings for build 'virtualbox-iso':
@@ -71,12 +71,12 @@ Warnings for build 'virtualbox-iso':
 ==> virtualbox-iso: Retrieving Guest additions
 ==> virtualbox-iso: Trying /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
 ==> virtualbox-iso: Trying /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
-==> virtualbox-iso: /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso => /Users/kassk/github.com/karolykass/learn-packer/packer_cache/7784a55a71d48a1e9b5c487431438fef0f19d87f.iso
+==> virtualbox-iso: /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso => /Users/user/github.com/karolykass/learn-packer/packer_cache/7784a55a71d48a1e9b5c487431438fef0f19d87f.iso
 ==> virtualbox-iso: Retrieving ISO
 ==> virtualbox-iso: Trying https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso
 ==> virtualbox-iso: Trying https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso?checksum=sha512%3Acc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245
 debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [==========================================================================================] 100.00% 7s
-==> virtualbox-iso: https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso?checksum=sha512%3Acc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245 => /Users/kassk/github.com/karolykass/learn-packer/packer_cache/196d97167e60cd05842b8cc62cbab6b251987f97.iso
+==> virtualbox-iso: https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso?checksum=sha512%3Acc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245 => /Users/user/github.com/karolykass/learn-packer/packer_cache/196d97167e60cd05842b8cc62cbab6b251987f97.iso
 ==> virtualbox-iso: Starting HTTP server on port 8270
 ==> virtualbox-iso: Creating virtual machine...
 ==> virtualbox-iso: Creating hard drive...

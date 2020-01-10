@@ -2,7 +2,7 @@
     "builders": [{
       "type": "virtualbox-iso",
       "guest_os_type": "Debian_64",
-      "iso_url": "{{user `debian_cd_mirror`}}/{{user `debian_version`}}/{{user `debian_port`}}/iso-cd/debian-{{user `debian_version`}}-{{user `debian_port`}}-netinst.iso",
+      "iso_url": "{{user `debian_cds_dvds_archive`}}/{{user `debian_version`}}/{{user `debian_port`}}/iso-cd/debian-{{user `debian_version`}}-{{user `debian_port`}}-netinst.iso",
       "iso_checksum" :"{{user `iso_checksum`}}",
       "iso_checksum_type": "sha512",
       "iso_checksum_url": "{{user `debian_cd_mirror`}}/{{user `debian_version`}}/{{user `debian_port`}}/iso-cd/SHA512SUMS",
@@ -39,6 +39,7 @@
     }],
   "variables": {
       "debian_cd_mirror": "http://ftp.bme.hu/debian-cd",
+      "debian_cds_dvds_archive": "https://cdimage.debian.org/cdimage/archive",
       "debian_version": "9.8.0",
       "debian_port": "amd64",
       "iso_checksum" :"cc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245",

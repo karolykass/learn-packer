@@ -4,6 +4,9 @@ This repo is for myself and is about how to build VMs in an automated way with H
 
 ## Prerequisites
 
+$ date  
+Mon Jan 13 22:49:33 CET 2020     
+
 ### macOS or Linux
 
 I used macOS.  
@@ -27,9 +30,29 @@ Packer v1.5.1
 
 ## Build VMs with Packer
 
-### Debian 10.2.0
+## Debian 10 (stable)
 
-[ToDo.md](ToDo.md)
+### Debian 10.2.0 (stable)
+
+#### Build with packer
+
+##### Validate template
+
+$ **packer validate** ***debian-10.2.0-amd64-standard-hu.json***  
+
+##### Inspect template
+
+$ **packer inspect** ***debian-10.2.0-amd64-standard-hu.json***  
+
+##### Build VM
+
+$ **packer build** ***debian-10.2.0-amd64-standard-hu.json***  
+
+#### Import VM to VirtualBox
+
+VirtualBox -> File -> Import Appliance... -> build/debian/10.2.0/packer-debian-10.2.0-amd64-standard-hu-virtualbox-iso.ovf  
+
+## Debian 9 (oldstable)
 
 ### Debian 9.11.0 (oldstable / archived)
 
@@ -43,13 +66,24 @@ https://wiki.debian.org/DebianInstaller/Preseed
 ### stable
 
 Appendix B. Automating the installation using preseeding  
-https://www.debian.org/releases/stable/amd64/apbs01.html.en  
+https://www.debian.org/releases/stable/amd64/apbs01.en.html  
 
 B.4. Contents of the preconfiguration file (for stable)  
-https://www.debian.org/releases/stable/amd64/apbs04.html.en  
+https://www.debian.org/releases/stable/amd64/apbs04.en.html  
 
   * preconfiguration file example (for stable)  
 https://www.debian.org/releases/stable/example-preseed.txt  
+
+#### buster (stable)
+
+Appendix B. Automating the installation using preseeding  
+https://www.debian.org/releases/buster/amd64/apbs01.en.html  
+
+B.4. Contents of the preconfiguration file (for stretch)  
+https://www.debian.org/releases/buster/amd64/apbs04.en.html  
+
+  * preconfiguration file example (for stretch)  
+https://www.debian.org/releases/buster/example-preseed.txt  
 
 ## Download installer and packages
 

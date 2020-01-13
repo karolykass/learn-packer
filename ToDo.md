@@ -2,15 +2,6 @@
 
 ## Debian
 
-### oldstable
-
-#### oldstable old releases
-Debian 9.9.0  
-// Debian 9.10.0-BROKEN_DO_NOT_USE  
-
-#### oldstable actual release
-Debian 9.11.0  
-
 ### stable
 
 #### stable old releases

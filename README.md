@@ -2,15 +2,9 @@
 
 This repo is for myself and is about how to build VMs in an automated way with HashiCorp's Packer.  
 
-## Build VMs with Packer
+## Prerequisites
 
-### Debian 9.8.0
-
-#### Build with packer
-
-##### Prerequisites
-
-###### macOS or Linux
+### macOS or Linux
 
 I used macOS.  
 
@@ -19,93 +13,71 @@ ProductName:	Mac OS X
 ProductVersion:	10.14.6  
 BuildVersion:	18G2022  
 
-###### VirtualBox
+#### VirtualBox
 
 $ VirtualBoxVM --help | head -n 1  
 Oracle VM VirtualBox VM Runner v6.1.0  
 $ VBoxManage --version  
 6.1.0r135406  
 
-###### Packer
+#### Packer
 
-$ packer version
-Packer v1.5.1
+$ packer version  
+Packer v1.5.1  
 
-##### Validate template
+## Build VMs with Packer
 
-$ **packer validate** ***debian-9.8.0-amd64-standard-hu.json***
+### Debian 10.2.0
 
-##### Inspect template
+[ToDo] (ToDo.md)
 
-$ **packer inspect** ***debian-9.8.0-amd64-standard-hu.json***
+### Debian 9.11.0 (oldstable / archived)
 
-##### Build VM
+[archived] (archived.md)
 
-$ **packer build** ***debian-9.8.0-amd64-standard-hu.json***
-
-#### Import VM to VirtualBox
-
-VirtualBox -> File -> Import Appliance... -> build/debian/packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso.ovf
-
-#### Debian automated install notes
+## Debian automated install notes
 
 DebianInstaller Preseed  
-https://wiki.debian.org/DebianInstaller/Preseed
+https://wiki.debian.org/DebianInstaller/Preseed  
 
-##### stable
+### stable
 
 Appendix B. Automating the installation using preseeding  
-https://www.debian.org/releases/stable/amd64/apbs01.html.en
+https://www.debian.org/releases/stable/amd64/apbs01.html.en  
 
 B.4. Contents of the preconfiguration file (for stable)  
-https://www.debian.org/releases/stable/amd64/apbs04.html.en
+https://www.debian.org/releases/stable/amd64/apbs04.html.en  
 
   * preconfiguration file example (for stable)  
-https://www.debian.org/releases/stable/example-preseed.txt
+https://www.debian.org/releases/stable/example-preseed.txt  
 
-##### stretch
-
-Appendix B. Automating the installation using preseeding  
-https://www.debian.org/releases/stretch/amd64/apbs01.html.en
-
-B.4. Contents of the preconfiguration file (for stretch)  
-https://www.debian.org/releases/stretch/amd64/apbs04.html.en
-
-  * preconfiguration file example (for stretch)  
-https://www.debian.org/releases/stretch/example-preseed.txt
-
-#### Download installer and packages
+## Download installer and packages
 
   * Downloading Debian CD/DVD images via HTTP/FTP  
-https://www.debian.org/CD/http-ftp/#mirrors
+https://www.debian.org/CD/http-ftp/#mirrors  
 
   * Debian worldwide mirror sites  
-https://www.debian.org/mirror/list
+https://www.debian.org/mirror/list  
 
-##### Hungary
+### Hungary
 
 http://ftp.bme.hu/debian-cd/  
 http://ftp.hu.debian.org/debian/  
-
-Debian 9.8 stretch amd64 iso  
-http://ftp.bme.hu/debian-cd/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso  
-http://ftp.bme.hu/debian-cd/9.8.0/amd64/iso-cd/SHA512SUMS  
-cc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245    debian-9.8.0-amd64-netinst.iso
 
 ## Used examples / useful links
 
 ### chef/bento
 Packer templates for building minimal Vagrant baseboxes  
-https://github.com/chef/bento | http://chef.github.io/bento/
+https://github.com/chef/bento | http://chef.github.io/bento/  
 
 ### kaorimatz/packer-templates
 Packer templates for Vagrant base boxes  
-https://github.com/kaorimatz/packer-templates/
+https://github.com/kaorimatz/packer-templates/  
 
 ## "I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail. - Abraham Maslow"
 
 ### CNCF Cloud Native Interactive Landscape
-https://landscape.cncf.io/
+https://landscape.cncf.io/  
 
 ### PERIODIC TABLE OF DEVOPS TOOLS (V3)
-https://xebialabs.com/periodic-table-of-devops-tools/
+https://xebialabs.com/periodic-table-of-devops-tools/  

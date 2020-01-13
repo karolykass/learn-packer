@@ -6,7 +6,7 @@
       "iso_checksum" :"{{user `iso_checksum`}}",
       "iso_checksum_type": "sha512",
       "iso_checksum_url": "{{user `debian_cd_mirror`}}/{{user `debian_version`}}/{{user `debian_port`}}/iso-cd/SHA512SUMS",
-      "output_directory": "build/debian",
+      "output_directory": "../build/debian/{{user `debian_version`}}",
       "vm_name": "packer-debian-{{user `debian_version`}}-{{user `debian_port`}}-standard-hu-{{build_type}}",
       "disk_size": "{{user `vb_disk_size`}}",
       "vboxmanage": [
@@ -15,7 +15,7 @@
         ["modifyvm", "{{.Name}}", "--vram", "{{user `vb_vram`}}"],
         ["modifyvm", "{{.Name}}", "--nictype1", "{{user `vb_nictype1`}}"]
       ],
-      "http_directory": "http",
+      "http_directory": "../http",
       "boot_wait": "5s",
       "boot_command": [
         "<esc><wait>",
@@ -32,13 +32,12 @@
     "provisioners": [{
       "type": "shell",
       "scripts": [
-        "scripts/debian/{{user `debian_version`}}/{{user `debian_port`}}/networking.sh",
-        "scripts/debian/{{user `debian_version`}}/{{user `debian_port`}}/virtualbox.sh",
-        "scripts/debian/{{user `debian_version`}}/{{user `debian_port`}}/cleanup.sh"
+        "../scripts/debian/{{user `debian_version`}}/{{user `debian_port`}}/networking.sh",
+        "../scripts/debian/{{user `debian_version`}}/{{user `debian_port`}}/virtualbox.sh",
+        "../scripts/debian/{{user `debian_version`}}/{{user `debian_port`}}/cleanup.sh"
       ]
     }],
   "variables": {
-      "debian_cd_mirror": "http://ftp.bme.hu/debian-cd",
       "debian_cds_dvds_archive": "https://cdimage.debian.org/cdimage/archive",
       "debian_version": "9.8.0",
       "debian_port": "amd64",

@@ -3,7 +3,10 @@
 **/.DS_Store
 **/._.DS_Store
 packer_cache/
+archived/packer_cache/
 !build/
 build/*
 !build/build_terminal_output/
 !build/build_terminal_output/**
+build/build_terminal_output/.DS_Store
+build/build_terminal_output/._.DS_Store

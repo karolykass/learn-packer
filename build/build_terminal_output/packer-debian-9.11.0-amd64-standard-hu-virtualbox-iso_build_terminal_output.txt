@@ -1,5 +1,5 @@
 host:learn-packer user$ date
-Mon Jan 13 13:17:35 CET 2020
+Mon Jan 13 14:56:14 CET 2020
 
 
 host:learn-packer user$ sw_vers
@@ -23,7 +23,7 @@ Packer v1.5.1
 host:learn-packer user$ cd archived/
 
 
-host:archived user$ packer validate debian-9.8.0-amd64-standard-hu.json
+host:archived user$ packer validate debian-9.11.0-amd64-standard-hu.json
 Template validation succeeded, but there were some warnings.
 These are ONLY WARNINGS, and Packer will attempt to build the
 template despite them, but they should be paid attention to.
@@ -33,13 +33,13 @@ Warnings for build 'virtualbox-iso':
 * You have provided both an iso_checksum and an iso_checksum_url. Discarding the iso_checksum_url and using the checksum.
 
 
-host:archived user$ packer inspect debian-9.8.0-amd64-standard-hu.json
+host:archived user$ packer inspect debian-9.11.0-amd64-standard-hu.json
 Optional variables and their defaults:
 
   debian_cds_dvds_archive = https://cdimage.debian.org/cdimage/archive
   debian_port             = amd64
-  debian_version          = 9.8.0
-  iso_checksum            = cc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245
+  debian_version          = 9.11.0
+  iso_checksum            = 6953c392ac4d47cd951b5418a59f857d268ec22fc24c26878053f2b78f9e4bd8dd0791336a55c175a79a6855f89fe18f93125c0c7593977955b3baf4d71fa4b4
   ssh_password            = p4sSW0rD
   ssh_timeout             = 60m
   ssh_username            = dadmin
@@ -62,7 +62,7 @@ functions such as 'timestamp', these are processed at build time,
 and therefore only show in their raw form here.
 
 
-host:archived user$ packer build debian-9.8.0-amd64-standard-hu.json
+host:archived user$ packer build debian-9.11.0-amd64-standard-hu.json
 virtualbox-iso: output will be in this color.
 
 Warnings for build 'virtualbox-iso':
@@ -74,19 +74,19 @@ Warnings for build 'virtualbox-iso':
 ==> virtualbox-iso: Trying /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
 ==> virtualbox-iso: /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso => /Users/user/github.com/karolykass/learn-packer/archived/packer_cache/7784a55a71d48a1e9b5c487431438fef0f19d87f.iso
 ==> virtualbox-iso: Retrieving ISO
-==> virtualbox-iso: Trying https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso
-==> virtualbox-iso: Trying https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso?checksum=sha512%3Acc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245
-debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
-==> virtualbox-iso: https://cdimage.debian.org/cdimage/archive/9.8.0/amd64/iso-cd/debian-9.8.0-amd64-netinst.iso?checksum=sha512%3Acc4a6bd50925c1c4af98049060e304494bc9da61eb5eb272c556d67608de14d4e6a4b8bc1c9412a0f810083912e228569f3771ffffa7174538f3e26f45a05245 => /Users/user/github.com/karolykass/learn-packer/archived/packer_cache/196d97167e60cd05842b8cc62cbab6b251987f97.iso
-==> virtualbox-iso: Starting HTTP server on port 8995
+==> virtualbox-iso: Trying https://cdimage.debian.org/cdimage/archive/9.11.0/amd64/iso-cd/debian-9.11.0-amd64-netinst.iso
+==> virtualbox-iso: Trying https://cdimage.debian.org/cdimage/archive/9.11.0/amd64/iso-cd/debian-9.11.0-amd64-netinst.iso?checksum=sha512%3A6953c392ac4d47cd951b5418a59f857d268ec22fc24c26878053f2b78f9e4bd8dd0791336a55c175a79a6855f89fe18f93125c0c7593977955b3baf4d71fa4b4
+debian-9.11.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [===========] 100.00% 7s
+==> virtualbox-iso: https://cdimage.debian.org/cdimage/archive/9.11.0/amd64/iso-cd/debian-9.11.0-amd64-netinst.iso?checksum=sha512%3A6953c392ac4d47cd951b5418a59f857d268ec22fc24c26878053f2b78f9e4bd8dd0791336a55c175a79a6855f89fe18f93125c0c7593977955b3baf4d71fa4b4 => /Users/user/github.com/karolykass/learn-packer/archived/packer_cache/929edbc49a5c647622447f5cd15dba69d75f7aa4.iso
+==> virtualbox-iso: Starting HTTP server on port 8770
 ==> virtualbox-iso: Creating virtual machine...
 ==> virtualbox-iso: Creating hard drive...
-==> virtualbox-iso: Creating forwarded port mapping for communicator (SSH, WinRM, etc) (host port 3888)
+==> virtualbox-iso: Creating forwarded port mapping for communicator (SSH, WinRM, etc) (host port 2707)
 ==> virtualbox-iso: Executing custom VBoxManage commands...
-    virtualbox-iso: Executing: modifyvm packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso --cpus 1
-    virtualbox-iso: Executing: modifyvm packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso --memory 1024
-    virtualbox-iso: Executing: modifyvm packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso --vram 16
-    virtualbox-iso: Executing: modifyvm packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso --nictype1 82545EM
+    virtualbox-iso: Executing: modifyvm packer-debian-9.11.0-amd64-standard-hu-virtualbox-iso --cpus 1
+    virtualbox-iso: Executing: modifyvm packer-debian-9.11.0-amd64-standard-hu-virtualbox-iso --memory 1024
+    virtualbox-iso: Executing: modifyvm packer-debian-9.11.0-amd64-standard-hu-virtualbox-iso --vram 16
+    virtualbox-iso: Executing: modifyvm packer-debian-9.11.0-amd64-standard-hu-virtualbox-iso --nictype1 82545EM
 ==> virtualbox-iso: Starting the virtual machine...
 ==> virtualbox-iso: Waiting 5s for boot...
 ==> virtualbox-iso: Typing the boot command...
@@ -95,7 +95,7 @@ debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
 ==> virtualbox-iso: Connected to SSH!
 ==> virtualbox-iso: Uploading VirtualBox version info (6.1.0)
 ==> virtualbox-iso: Uploading VirtualBox guest additions ISO...
-==> virtualbox-iso: Provisioning with shell script: ../scripts/debian/9.8.0/amd64/networking.sh
+==> virtualbox-iso: Provisioning with shell script: ../scripts/debian/9.11.0/amd64/networking.sh
 ==> virtualbox-iso: + lsb_release -r
 ==> virtualbox-iso: + awk {print $2}
 ==> virtualbox-iso: + debian_version=9.11
@@ -108,11 +108,9 @@ debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
 ==> virtualbox-iso: Generating grub configuration file ...
 ==> virtualbox-iso: Found linux image: /boot/vmlinuz-4.9.0-11-amd64
 ==> virtualbox-iso: Found initrd image: /boot/initrd.img-4.9.0-11-amd64
-==> virtualbox-iso: Found linux image: /boot/vmlinuz-4.9.0-8-amd64
-==> virtualbox-iso: Found initrd image: /boot/initrd.img-4.9.0-8-amd64
 ==> virtualbox-iso: done
 ==> virtualbox-iso: + sudo sh -c echo "pre-up sleep 2" >> /etc/network/interfaces
-==> virtualbox-iso: Provisioning with shell script: ../scripts/debian/9.8.0/amd64/virtualbox.sh
+==> virtualbox-iso: Provisioning with shell script: ../scripts/debian/9.11.0/amd64/virtualbox.sh
 ==> virtualbox-iso: + [ virtualbox-iso != virtualbox-iso ]
 ==> virtualbox-iso: + HOME_DIR=/home/dadmin
 ==> virtualbox-iso: + ISO=VBoxGuestAdditions.iso
@@ -145,9 +143,9 @@ debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
     virtualbox-iso: Need to get 40.1 MB of archives.
     virtualbox-iso: After this operation, 164 MB of additional disk space will be used.
     virtualbox-iso: Get:1 http://ftp.hu.debian.org/debian stretch/main amd64 binutils amd64 2.28-5 [3,770 kB]
-    virtualbox-iso: Get:2 http://security.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.189-3+deb9u2 [1,447 kB]
-    virtualbox-iso: Get:3 http://ftp.hu.debian.org/debian stretch/main amd64 libc-dev-bin amd64 2.24-11+deb9u4 [259 kB]
-    virtualbox-iso: Get:4 http://ftp.hu.debian.org/debian stretch/main amd64 libc6-dev amd64 2.24-11+deb9u4 [2,364 kB]
+    virtualbox-iso: Get:2 http://ftp.hu.debian.org/debian stretch/main amd64 libc-dev-bin amd64 2.24-11+deb9u4 [259 kB]
+    virtualbox-iso: Get:3 http://ftp.hu.debian.org/debian stretch/main amd64 libc6-dev amd64 2.24-11+deb9u4 [2,364 kB]
+    virtualbox-iso: Get:4 http://security.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.189-3+deb9u2 [1,447 kB]
     virtualbox-iso: Get:5 http://ftp.hu.debian.org/debian stretch/main amd64 libisl15 amd64 0.18-1 [564 kB]
     virtualbox-iso: Get:6 http://ftp.hu.debian.org/debian stretch/main amd64 libmpfr4 amd64 3.1.5-1 [556 kB]
     virtualbox-iso: Get:7 http://ftp.hu.debian.org/debian stretch/main amd64 libmpc3 amd64 1.0.3-1+b2 [39.9 kB]
@@ -189,9 +187,9 @@ debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
 ==> virtualbox-iso: debconf: (This frontend requires a controlling tty.)
 ==> virtualbox-iso: debconf: falling back to frontend: Teletype
 ==> virtualbox-iso: dpkg-preconfigure: unable to re-open stdin:
-    virtualbox-iso: Fetched 40.1 MB in 1s (33.8 MB/s)
+    virtualbox-iso: Fetched 40.1 MB in 0s (49.5 MB/s)
     virtualbox-iso: Selecting previously unselected package binutils.
-    virtualbox-iso: (Reading database ... 32680 files and directories currently installed.)
+    virtualbox-iso: (Reading database ... 28454 files and directories currently installed.)
     virtualbox-iso: Preparing to unpack .../00-binutils_2.28-5_amd64.deb ...
     virtualbox-iso: Unpacking binutils (2.28-5) ...
     virtualbox-iso: Selecting previously unselected package libc-dev-bin.
@@ -376,9 +374,9 @@ debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
 ==> virtualbox-iso: debconf: (This frontend requires a controlling tty.)
 ==> virtualbox-iso: debconf: falling back to frontend: Teletype
 ==> virtualbox-iso: dpkg-preconfigure: unable to re-open stdin:
-    virtualbox-iso: Fetched 9,754 kB in 0s (10.6 MB/s)
+    virtualbox-iso: Fetched 9,754 kB in 2min 0s (81.2 kB/s)
     virtualbox-iso: Selecting previously unselected package dkms.
-    virtualbox-iso: (Reading database ... 38056 files and directories currently installed.)
+    virtualbox-iso: (Reading database ... 33830 files and directories currently installed.)
     virtualbox-iso: Preparing to unpack .../0-dkms_2.3-2_all.deb ...
     virtualbox-iso: Unpacking dkms (2.3-2) ...
     virtualbox-iso: Selecting previously unselected package linux-compiler-gcc-6-x86.
@@ -424,15 +422,15 @@ debian-9.8.0-amd64-netinst.iso 292.00 MiB / 292.00 MiB [============] 100.00% 8s
 ==> virtualbox-iso: + sudo umount /mnt/VBoxGuestAdditions
 ==> virtualbox-iso: + sudo rm -rf /mnt/VBoxGuestAdditions
 ==> virtualbox-iso: + rm -f /home/dadmin/VBoxGuestAdditions.iso
-==> virtualbox-iso: Provisioning with shell script: ../scripts/debian/9.8.0/amd64/cleanup.sh
+==> virtualbox-iso: Provisioning with shell script: ../scripts/debian/9.11.0/amd64/cleanup.sh
 ==> virtualbox-iso: + sudo apt-get clean
 ==> virtualbox-iso: Gracefully halting virtual machine...
 ==> virtualbox-iso: Preparing to export machine...
-    virtualbox-iso: Deleting forwarded port mapping for the communicator (SSH, WinRM, etc) (host port 3888)
+    virtualbox-iso: Deleting forwarded port mapping for the communicator (SSH, WinRM, etc) (host port 2707)
 ==> virtualbox-iso: Exporting virtual machine...
-    virtualbox-iso: Executing: export packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso --output ../build/debian/9.8.0/packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso.ovf
+    virtualbox-iso: Executing: export packer-debian-9.11.0-amd64-standard-hu-virtualbox-iso --output ../build/debian/9.11.0/packer-debian-9.11.0-amd64-standard-hu-virtualbox-iso.ovf
 ==> virtualbox-iso: Deregistering and deleting VM...
 Build 'virtualbox-iso' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
---> virtualbox-iso: VM files in directory: ../build/debian/9.8.0
+--> virtualbox-iso: VM files in directory: ../build/debian/9.11.0

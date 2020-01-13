@@ -29,11 +29,11 @@ Packer v1.5.1
 
 ### Debian 10.2.0
 
-[ToDo] (ToDo.md)
+[ToDo.md](ToDo.md)
 
 ### Debian 9.11.0 (oldstable / archived)
 
-[archived] (archived.md)
+[archived.md](archived.md)
 
 ## Debian automated install notes
 

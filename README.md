@@ -30,50 +30,54 @@ Packer v1.5.1
 
 ## Build VMs with Packer
 
-## Debian 10 (stable)
+### Debian 10 (stable)
 
-### Debian 10.2.0 (stable)
+#### Debian 10.2.0 (stable)
 
-#### Build with packer
+##### Build with packer
 
-##### Validate template
+###### Validate template
 
 $ **packer validate** ***debian-10.2.0-amd64-standard-hu.json***  
 
-##### Inspect template
+###### Inspect template
 
 $ **packer inspect** ***debian-10.2.0-amd64-standard-hu.json***  
 
-##### Build VM
+###### Build VM
 
 $ **packer build** ***debian-10.2.0-amd64-standard-hu.json***  
 
-#### Import VM to VirtualBox
+##### Import VM to VirtualBox
 
 VirtualBox -> File -> Import Appliance... -> build/debian/10.2.0/packer-debian-10.2.0-amd64-standard-hu-virtualbox-iso.ovf  
 
-## Debian 9 (oldstable)
+### Debian 9 (oldstable)
 
-### Debian 9.11.0 (oldstable / archived)
+#### Debian 9.11.0 (oldstable / archived)
 
 [archived.md](archived.md)
 
-## Debian GNU/Linux Installation Guide 
+## Documentation, notes
 
-### stable
+### Debian
+
+#### Debian GNU/Linux Installation Guide 
+
+##### stable
 
 https://www.debian.org/releases/stable/amd64/index.en.html  
 
-### buster (stable)
+##### buster (stable)
 
 https://www.debian.org/releases/buster/amd64/index.en.html  
 
-### Debian automated install notes
+##### Debian automated install notes
 
 DebianInstaller Preseed  
 https://wiki.debian.org/DebianInstaller/Preseed  
 
-#### stable
+###### stable
 
 Appendix B. Automating the installation using preseeding  
 https://www.debian.org/releases/stable/amd64/apbs01.en.html  
@@ -84,7 +88,7 @@ https://www.debian.org/releases/stable/amd64/apbs04.en.html
   * preconfiguration file example (for stable)  
 https://www.debian.org/releases/stable/example-preseed.txt  
 
-#### buster (stable)
+###### buster (stable)
 
 Appendix B. Automating the installation using preseeding  
 https://www.debian.org/releases/buster/amd64/apbs01.en.html  
@@ -95,7 +99,7 @@ https://www.debian.org/releases/buster/amd64/apbs04.en.html
   * preconfiguration file example (for stretch)  
 https://www.debian.org/releases/buster/example-preseed.txt  
 
-## Download installer and packages
+#### Debian - Download installer and packages
 
   * Downloading Debian CD/DVD images via HTTP/FTP  
 https://www.debian.org/CD/http-ftp/#mirrors  
@@ -103,7 +107,7 @@ https://www.debian.org/CD/http-ftp/#mirrors
   * Debian worldwide mirror sites  
 https://www.debian.org/mirror/list  
 
-### Hungary
+##### Hungary
 
 http://ftp.bme.hu/debian-cd/  
 http://ftp.hu.debian.org/debian/  

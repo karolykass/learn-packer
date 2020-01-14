@@ -144,10 +144,10 @@ https://wiki.debian.org/DebianInstaller/Preseed
 Appendix B. Automating the installation using preseeding  
 https://www.debian.org/releases/buster/amd64/apbs01.en.html  
 
-B.4. Contents of the preconfiguration file (for stretch)  
+B.4. Contents of the preconfiguration file (for buster)  
 https://www.debian.org/releases/buster/amd64/apbs04.en.html  
 
-  * preconfiguration file example (for stretch)  
+  * preconfiguration file example (for buster)  
 https://www.debian.org/releases/buster/example-preseed.txt  
 
 ###### stretch (oldstable)

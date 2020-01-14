@@ -120,7 +120,20 @@ $ **packer build** ***debian-9.8.0-amd64-standard-hu.json***
 
 VirtualBox -> File -> Import Appliance... -> build/debian/9.8.0/packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso.ovf  
 
+## Debian GNU/Linux Installation Guide 
+
+### buster (stable)
+
+https://www.debian.org/releases/buster/amd64/index.en.html  
+
+### stretch (oldstable)
+
+https://www.debian.org/releases/stretch/amd64/index.html.en  
+
 ### Debian automated install notes
+
+DebianInstaller Preseed  
+https://wiki.debian.org/DebianInstaller/Preseed  
 
 #### buster (stable)
 

@@ -58,12 +58,22 @@ VirtualBox -> File -> Import Appliance... -> build/debian/10.2.0/packer-debian-1
 
 [archived.md](archived.md)
 
-## Debian automated install notes
+## Debian GNU/Linux Installation Guide 
+
+### stable
+
+https://www.debian.org/releases/stable/amd64/index.en.html  
+
+### buster (stable)
+
+https://www.debian.org/releases/buster/amd64/index.en.html  
+
+### Debian automated install notes
 
 DebianInstaller Preseed  
 https://wiki.debian.org/DebianInstaller/Preseed  
 
-### stable
+#### stable
 
 Appendix B. Automating the installation using preseeding  
 https://www.debian.org/releases/stable/amd64/apbs01.en.html  

@@ -82,10 +82,10 @@ https://wiki.debian.org/DebianInstaller/Preseed
 Appendix B. Automating the installation using preseeding  
 https://www.debian.org/releases/stable/amd64/apbs01.en.html  
 
-B.4. Contents of the preconfiguration file (for stable)  
+B.4. Contents of the preconfiguration file (for buster)  
 https://www.debian.org/releases/stable/amd64/apbs04.en.html  
 
-  * preconfiguration file example (for stable)  
+  * preconfiguration file example (for buster)  
 https://www.debian.org/releases/stable/example-preseed.txt  
 
 ###### buster (stable)
@@ -93,10 +93,10 @@ https://www.debian.org/releases/stable/example-preseed.txt
 Appendix B. Automating the installation using preseeding  
 https://www.debian.org/releases/buster/amd64/apbs01.en.html  
 
-B.4. Contents of the preconfiguration file (for stretch)  
+B.4. Contents of the preconfiguration file (for buster)  
 https://www.debian.org/releases/buster/amd64/apbs04.en.html  
 
-  * preconfiguration file example (for stretch)  
+  * preconfiguration file example (for buster)  
 https://www.debian.org/releases/buster/example-preseed.txt  
 
 #### Debian - Download installer and packages
@@ -111,6 +111,42 @@ https://www.debian.org/mirror/list
 
 http://ftp.bme.hu/debian-cd/  
 http://ftp.hu.debian.org/debian/  
+
+### Ubuntu
+
+#### Ubuntu Installation Guide
+
+##### LTS
+
+https://help.ubuntu.com/lts/installation-guide/amd64/index.html  
+
+##### 18.04 (LTS)
+
+https://help.ubuntu.com/18.04/installation-guide/amd64/index.html  
+
+##### Ubuntu automated install notes
+
+###### LTS
+
+Appendix B. Automating the installation using preseeding  
+https://help.ubuntu.com/lts/installation-guide/amd64/apb.html  
+
+B.4. Contents of the preconfiguration file (for bionic)  
+https://help.ubuntu.com/lts/installation-guide/amd64/apbs04.html  
+
+ * preconfiguration file example (for bionic)  
+https://help.ubuntu.com/lts/installation-guide/example-preseed.txt  
+
+###### 18.04 (LTS)
+
+Appendix B. Automating the installation using preseeding  
+https://help.ubuntu.com/18.04/installation-guide/amd64/apb.html  
+
+B.4. Contents of the preconfiguration file (for bionic)  
+https://help.ubuntu.com/18.04/installation-guide/amd64/apbs04.html  
+
+ * preconfiguration file example (for bionic)  
+ https://help.ubuntu.com/18.04/installation-guide/example-preseed.txt  
 
 ## Used examples / useful links
 

@@ -28,6 +28,12 @@ $ VBoxManage --version
 $ packer version  
 Packer v1.5.1  
 
+## git clone
+
+$ git clone **git@github.com:karolykass/learn-packer.git**  
+
+$ cd learn-packer  
+
 ## Build VMs with Packer
 
 ### Debian 10 (stable)

@@ -1,4 +1,4 @@
-# Documentation, notes (for archived)
+# Documentation, notes (archived)
 
 ## Debian
 

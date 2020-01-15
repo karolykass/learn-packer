@@ -120,6 +120,6 @@ $ **packer build** ***debian-9.8.0-amd64-standard-hu.json***
 
 VirtualBox -> File -> Import Appliance... -> build/debian/9.8.0/packer-debian-9.8.0-amd64-standard-hu-virtualbox-iso.ovf  
 
-## Docs and notes
+## Docs and notes (archived)
 
 [docs_and_notes-archived.md](docs_and_notes-archived.md)  

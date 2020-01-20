@@ -88,7 +88,7 @@ $ **packer build** ***ubuntu-18.04.3-server-amd64-standard-hu.json***
 
 ###### Import VM to VirtualBox
 
-VirtualBox -> File -> Import Appliance... -> build/debian/10.2.0/packer-ubuntu-18.04.3-amd64-standard-hu-virtualbox-iso.ovf  
+VirtualBox -> File -> Import Appliance... -> build/ubuntu/18.04.3/packer-ubuntu-18.04.3-amd64-standard-hu-virtualbox-iso.ovf  
 
 ## Docs and notes
 

@@ -36,33 +36,59 @@ $ cd learn-packer
 
 ## Build VMs with Packer
 
-### Debian 10 (stable)
+### Debian
 
-#### Debian 10.2.0 (stable)
+#### Debian 10 (stable)
 
-##### Build with packer
+##### Debian 10.2.0 (stable)
 
-###### Validate template
+###### Build with packer
+
+**Validate template**  
 
 $ **packer validate** ***debian-10.2.0-amd64-standard-hu.json***  
 
-###### Inspect template
+**Inspect template**  
 
 $ **packer inspect** ***debian-10.2.0-amd64-standard-hu.json***  
 
-###### Build VM
+**Build VM**  
 
 $ **packer build** ***debian-10.2.0-amd64-standard-hu.json***  
 
-##### Import VM to VirtualBox
+###### Import VM to VirtualBox
 
 VirtualBox -> File -> Import Appliance... -> build/debian/10.2.0/packer-debian-10.2.0-amd64-standard-hu-virtualbox-iso.ovf  
 
-### Debian 9 (oldstable)
+#### Debian 9 (oldstable)
 
-#### Debian 9.11.0 (oldstable / archived)
+##### Debian 9.11.0 (oldstable / archived)
 
 [archived.md](archived.md)  
+
+### Ubuntu
+
+#### Ubuntu 18.04 (LTS)
+
+##### Ubuntu 18.04.3 (LTS)
+
+###### Build with packer
+
+**Validate template**  
+
+$ **packer validate** ***ubuntu-18.04.3-server-amd64-standard-hu.json***  
+
+**Inspect template**  
+
+$ **packer inspect** ***ubuntu-18.04.3-server-amd64-standard-hu.json***  
+
+**Build VM**  
+
+$ **packer build** ***ubuntu-18.04.3-server-amd64-standard-hu.json***  
+
+###### Import VM to VirtualBox
+
+VirtualBox -> File -> Import Appliance... -> build/debian/10.2.0/packer-ubuntu-18.04.3-amd64-standard-hu-virtualbox-iso.ovf  
 
 ## Docs and notes
 

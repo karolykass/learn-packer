@@ -28,6 +28,10 @@ $ VBoxManage --version
 $ packer version  
 Packer v1.5.1  
 
+### Downloads
+
+[downloads.md](downloads.md)  
+
 ## git clone
 
 $ git clone **git@github.com:karolykass/learn-packer.git**  

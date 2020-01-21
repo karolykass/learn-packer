@@ -1,5 +1,15 @@
 # Documentation, notes
 
+## VirtualBox
+
+[Documentation](https://www.virtualbox.org/wiki/Documentation)  
+
+[Oracle® VM VirtualBox® User Manual](https://www.virtualbox.org/manual/UserManual.html)  
+
+## Packer
+
+[Packer Documentation](https://www.packer.io/docs/index.html)
+
 ## Debian
 
 ### Debian GNU/Linux Installation Guide 

@@ -10,3 +10,7 @@ build/*
 !build/build_terminal_output/**
 build/build_terminal_output/.DS_Store
 build/build_terminal_output/._.DS_Store
+# ignore mine
+/mine
+/http/mine
+/scripts/mine
